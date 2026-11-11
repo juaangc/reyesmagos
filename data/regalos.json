@@ -1,1 +1,79 @@
-[]
+[
+  {
+    "id": "f767930f-c58e-4c7e-976f-547495b4c750",
+    "name": "Gafas de sol Scotta",
+    "emoji": "🕶️",
+    "brands": [
+      "Scotta",
+      "RayBan",
+      "Lacoste"
+    ],
+    "notes": "Me probé varias en El Corte Inglés (enlace Imágenes)",
+    "links": [
+      {
+        "label": "Imágenes",
+        "url": "https://juangc.notion.site/Gafas-de-Sol-Scotta-3e9e01976159801584ccf61118556556?source=copy_link"
+      }
+    ]
+  },
+  {
+    "id": "1f68c39c-2e50-4262-9c9a-7f11c1b1414f",
+    "name": "Zapatillas Adidas Spezial",
+    "emoji": "👟",
+    "brands": [
+      "Adidas"
+    ],
+    "notes": "",
+    "links": [
+      {
+        "label": "JD Sports",
+        "url": "https://www.jdsports.es/product/gris-adidas-originals-handball-spezial/19662915_jdsportses/"
+      }
+    ]
+  },
+  {
+    "id": "30fb7e1f-b72e-42f0-99a2-c444874567d0",
+    "name": "Disco Duro 1TB ó 2TB",
+    "emoji": "📂",
+    "brands": [],
+    "notes": "En Amazon habrá buenas opciones.\nImportante que tenga USB C",
+    "links": []
+  },
+  {
+    "id": "ab24258b-1d9b-4231-a951-ca7d60e8f4e5",
+    "name": "Un viaje en Familia",
+    "emoji": "✈️",
+    "brands": [],
+    "notes": "Destino sorpresa...\nItalia, Francia...",
+    "links": []
+  },
+  {
+    "id": "f229439d-1992-4cde-92ef-4477a70a7130",
+    "name": "Comodín: Una tarjeta regalo",
+    "emoji": "🎁",
+    "brands": [
+      "Amazon",
+      "Apple"
+    ],
+    "notes": "Todas pueden ser encontradas en tiendas online o física",
+    "links": []
+  },
+  {
+    "id": "d8bfbc03-6c8f-4951-95c4-9911cbe9a856",
+    "name": "Apple Watch Series 12",
+    "emoji": "⌚",
+    "brands": [
+      "Apple"
+    ],
+    "notes": "",
+    "links": []
+  },
+  {
+    "id": "aaf45678-9ad0-4480-a611-a5e76ccd141c",
+    "name": "Apple Pencil Pro",
+    "emoji": "✏️",
+    "brands": [],
+    "notes": "",
+    "links": []
+  }
+]
