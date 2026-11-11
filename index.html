@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101f1b">
+  <meta name="description" content="Una carta de Reyes Magos, hecha con ilusión y una pequeña dosis de planificación.">
+  <title>Mi carta a los Reyes Magos · 2027</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <canvas id="snowfall" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-star" aria-hidden="true">✳</span>
+      <span class="brand-copy"><strong>LA CARTA</strong><small>DE REYES MAGOS</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#carta">La carta</a>
+      <a href="#deseos">Mis deseos</a>
+      <a href="#final">Con cariño</a>
+    </nav>
+    <a class="header-date" href="#deseos"><span class="date-dot"></span> 06 · 01 · 2027</a>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span class="eyebrow-line"></span> UNA TRADICIÓN, MUCHAS ILUSIONES</p>
+        <h1 class="reveal reveal-delay-1">Queridos <em>Reyes</em><br>Magos<span class="title-period">.</span></h1>
+        <p class="hero-description reveal reveal-delay-2">Este año he preparado una pequeña selección de cosas que me harían especial ilusión. Sin exigencias, con mucha magia y con los pies —más o menos— en el suelo.</p>
+        <div class="hero-actions reveal reveal-delay-3">
+          <a class="button button-gold" href="#deseos">Descubrir mi lista <span aria-hidden="true">↗</span></a>
+          <span class="hero-note"><span class="tiny-star">✦</span> <span id="daysUntilReyes">La magia está cerca</span> para la mañana de Reyes</span>
+        </div>
+        <div class="hero-footnote reveal reveal-delay-3"><span class="footnote-rule"></span> ESPECIALMENTE PREPARADA PARA SUS MAJESTADES</div>
+      </div>
+
+      <div class="hero-art" aria-label="Ilustración decorativa de una carta navideña, estrellas y un árbol de Navidad" role="img">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <span class="orbit-star star-a">✦</span>
+        <span class="orbit-star star-b">✧</span>
+        <span class="orbit-star star-c">✦</span>
+        <div class="moon-shape"></div>
+        <div class="pine-tree tree-back"><i></i><i></i><i></i><b></b></div>
+        <div class="pine-tree tree-front"><i></i><i></i><i></i><b></b></div>
+        <div class="gift gift-one"><span></span></div>
+        <div class="gift gift-two"><span></span></div>
+        <div class="letter-illustration">
+          <div class="letter-topline"><span>SS. MM.</span><span>✦</span></div>
+          <div class="letter-rule"></div>
+          <p class="letter-script">Una carta<br>con ilusión</p>
+          <div class="letter-stamp">06<br><small>ENE</small></div>
+          <div class="letter-bottom"><span>CON CARIÑO</span><span>♡</span></div>
+        </div>
+        <div class="sparkle sparkle-one">✧</div>
+        <div class="sparkle sparkle-two">✦</div>
+        <div class="sparkle sparkle-three">✧</div>
+      </div>
+      <a class="scroll-cue" href="#carta" aria-label="Desplazarse hacia abajo"><span class="scroll-cue-line"></span><span>DESLIZA PARA LEER</span></a>
+      <div class="hero-bottom-label" aria-hidden="true">MADRID · INVIERNO 2026</div>
+    </section>
+
+    <section class="intro-section section-pad" id="carta">
+      <div class="section-kicker reveal"><span>01</span><span class="kicker-rule"></span><span>UNAS PALABRAS ANTES</span></div>
+      <div class="intro-grid">
+        <div class="intro-heading reveal">
+          <h2>La magia está<br>en los <em>detalles.</em></h2>
+          <span class="heading-flourish" aria-hidden="true">✳</span>
+        </div>
+        <div class="intro-text reveal reveal-delay-1">
+          <p class="intro-lead">Queridos Melchor, Gaspar y Baltasar:</p>
+          <p>Otro año más llega ese momento de escribir la carta. He reunido aquí algunas ideas, con sus enlaces y pequeños detalles para que encontrar cada cosa sea un poco más sencillo.</p>
+          <p>Por supuesto, lo importante no está envuelto en papel de regalo. Pero, ya que estamos, tampoco vamos a ponerle límites a la ilusión.</p>
+          <div class="signature"><span class="signature-line"></span><span>Con mucho cariño</span></div>
+        </div>
+      </div>
+      <div class="intro-decoration" aria-hidden="true"><span>❄</span><span>✧</span><span>✳</span></div>
+    </section>
+
+    <section class="wishlist-section section-pad" id="deseos">
+      <div class="wishlist-top reveal">
+        <div>
+          <div class="section-kicker"><span>02</span><span class="kicker-rule"></span><span>LA LISTA DE DESEOS</span></div>
+          <h2>Pequeñas cosas,<br><em>grandes ilusiones.</em></h2>
+        </div>
+        <div class="wishlist-aside">
+          <p>Una selección personal de ideas. Cada detalle cuenta, así que he dejado enlaces y notas para facilitar la búsqueda.</p>
+          <div class="wish-count"><span id="giftCount">0</span><span>DESEOS EN LA LISTA</span></div>
+        </div>
+      </div>
+
+      <div id="giftGrid" class="gift-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state reveal">
+        <div class="empty-ornament" aria-hidden="true"><span>✧</span><b>🎁</b><span>✦</span></div>
+        <p class="empty-title">La ilusión está por escribir.</p>
+        <p>Esta carta todavía no tiene regalos. Añade tus primeras ideas desde la pequeña estrella del pie de página.</p>
+      </div>
+      <div class="wishlist-bottom reveal">
+        <span class="bottom-star">✦</span>
+        <p>La lista puede cambiar. La ilusión, no.</p>
+        <span class="bottom-star">✦</span>
+      </div>
+    </section>
+
+    <section class="closing-section" id="final">
+      <div class="closing-stars" aria-hidden="true"><span>✦</span><span>✧</span><span>✳</span><span>✧</span><span>✦</span></div>
+      <div class="closing-inner reveal">
+        <p class="closing-kicker">Y, SOBRE TODO...</p>
+        <h2>Que nunca falte<br><em>la ilusión.</em></h2>
+        <p class="closing-copy">Gracias por hacer que cada enero siga teniendo algo de magia.</p>
+        <div class="wax-seal" aria-hidden="true"><span>✦</span></div>
+        <p class="closing-signature">Con cariño <span>♡</span></p>
+      </div>
+      <div class="closing-horizon" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><span class="brand-star" aria-hidden="true">✳</span><span>CARTA DE REYES <small>· 2027</small></span></div>
+    <p>Hecha con ilusión y un poquito de paciencia.</p>
+    <div class="footer-right"><span>06.01.2027</span><button class="editor-access" id="editorAccess" type="button" aria-label="Abrir editor de la carta" title="Abrir editor">✦</button></div>
+  </footer>
+
+  <dialog class="editor-dialog" id="editorDialog" aria-labelledby="editorTitle">
+    <div class="editor-shell">
+      <header class="editor-header">
+        <div><p class="editor-kicker">EL TALLER DE LA CARTA</p><h2 id="editorTitle">Un pequeño retoque.</h2><p class="editor-subtitle">Añade, organiza o edita tus peticiones. Solo tú tienes que saber dónde está este rincón.</p></div>
+        <button class="dialog-close" id="closeEditor" type="button" aria-label="Cerrar editor">×</button>
+      </header>
+      <div class="editor-body">
+        <aside class="editor-sidebar">
+          <div class="sidebar-heading"><span>TUS PETICIONES</span><span id="editorGiftCount">0</span></div>
+          <div id="editorGiftList" class="editor-gift-list"></div>
+          <button class="button button-dark new-gift-button" id="newGiftButton" type="button"><span>＋</span> Nueva petición</button>
+          <div class="backup-tools">
+            <span class="backup-title">COPIA DE SEGURIDAD</span>
+            <button class="text-button" id="exportButton" type="button">↓ Descargar mis datos</button>
+            <button class="text-button" id="importButton" type="button">↑ Importar una copia</button>
+            <input id="importInput" type="file" accept="application/json,.json" hidden>
+          </div>
+        </aside>
+
+        <section class="editor-form-area">
+          <div class="form-heading"><span class="form-step">✦</span><div><h3 id="formTitle">Nueva petición</h3><p>Los campos con * son los importantes.</p></div></div>
+          <form id="giftForm">
+            <div class="form-row name-emoji-row">
+              <label class="field field-grow"><span>Nombre del regalo <b>*</b></span><input id="giftName" name="name" type="text" maxlength="90" placeholder="Ej. Auriculares inalámbricos" required></label>
+              <label class="field emoji-field"><span>Icono</span><input id="giftEmoji" name="emoji" type="text" maxlength="8" value="🎁" aria-label="Emoji del regalo" placeholder="🎁"></label>
+            </div>
+            <label class="field"><span>Marca(s)</span><input id="giftBrands" name="brands" type="text" maxlength="180" placeholder="Ej. Sony, Bose, Sennheiser"><small>Separa varias marcas con comas.</small></label>
+            <label class="field"><span>Notas adicionales</span><textarea id="giftNotes" name="notes" rows="3" maxlength="700" placeholder="Color, talla, modelo concreto, por qué me gusta..."></textarea></label>
+            <div class="links-editor">
+              <div class="links-editor-heading"><span>ENLACES</span><span class="optional-label">Puedes añadir varios</span></div>
+              <div id="linkRows" class="link-rows"></div>
+              <button class="add-link-button" id="addLinkButton" type="button"><span>＋</span> Añadir otro enlace</button>
+            </div>
+            <div class="form-actions">
+              <button class="button button-gold save-button" type="submit">Guardar petición <span>↗</span></button>
+              <button class="cancel-button" id="cancelEdit" type="button">Cancelar</button>
+              <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div class="editor-footnote"><span>✦</span> Los cambios se guardan en este navegador. Descarga una copia para no perderlos.</div>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript-note">Para ver y editar la lista de regalos necesitas activar JavaScript en el navegador.</p></noscript>
+</body>
+</html>
