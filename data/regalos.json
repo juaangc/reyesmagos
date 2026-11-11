@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": "f767930f-c58e-4c7e-976f-547495b4c750",
+    "name": "Gafas de sol Scotta",
+    "emoji": "🕶️",
+    "brands": [
+      "Scotta",
+      "RayBan",
+      "Lacoste"
+    ],
+    "notes": "Me probé varias en El Corte Inglés (enlace Imágenes)",
+    "links": [
+      {
+        "label": "Imágenes",
+        "url": "https://juangc.notion.site/Gafas-de-Sol-Scotta-3e9e01976159801584ccf61118556556?source=copy_link"
+      }
+    ]
+  },
+  {
+    "id": "1f68c39c-2e50-4262-9c9a-7f11c1b1414f",
+    "name": "Zapatillas Adidas Spezial",
+    "emoji": "👟",
+    "brands": [
+      "Adidas"
+    ],
+    "notes": "",
+    "links": [
+      {
+        "label": "JD Sports",
+        "url": "https://www.jdsports.es/product/gris-adidas-originals-handball-spezial/19662915_jdsportses/"
+      }
+    ]
+  },
+  {
+    "id": "30fb7e1f-b72e-42f0-99a2-c444874567d0",
+    "name": "Disco Duro 1TB ó 2TB",
+    "emoji": "📂",
+    "brands": [],
+    "notes": "En Amazon habrá buenas opciones.\nImportante que tenga USB C",
+    "links": []
+  }
+]
