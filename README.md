@@ -44,3 +44,22 @@ El acceso al editor es discreto, pero no es un sistema de autenticación: al ser
 ## Accesibilidad y rendimiento
 
 La web adapta sus columnas y controles a móvil, no usa librerías JavaScript externas y respeta la preferencia del sistema `prefers-reduced-motion` para reducir animaciones. La nieve se dibuja en un canvas ligero y se pausa cuando la pestaña deja de estar visible.
+
+
+## Lista pública de regalos (GitHub Pages)
+
+La lista compartida se lee desde `data/regalos.json`. Ese archivo es la fuente pública de datos; no se utiliza el `localStorage` de cada visitante como lista principal.
+
+### Publicar cambios
+
+1. Abre el editor discreto de la web y añade/modifica/elimina peticiones.
+2. Pulsa **Descargar regalos.json para publicar**.
+3. En GitHub, abre la carpeta `data/` del repositorio.
+4. Sustituye `regalos.json` por el archivo descargado y confirma el commit.
+5. La web leerá la nueva lista pública. Si la tienes abierta, pulsa **Recargar lista pública**.
+
+Los cambios del editor se guardan también como borrador local para que no se pierdan al recargar accidentalmente. La exportación genera el JSON limpio que debe publicarse. La importación permite recuperar una copia JSON anterior.
+
+**Privacidad:** GitHub Pages y `data/regalos.json` son públicos. No guardes datos personales o secretos en ese archivo. El botón discreto del editor no es un mecanismo de autenticación.
+
+La ruta del JSON es relativa (`data/regalos.json`), por lo que funciona en GitHub Pages tanto en repositorios de proyecto como en dominios personalizados.

@@ -146,9 +146,11 @@
           <div id="editorGiftList" class="editor-gift-list"></div>
           <button class="button button-dark new-gift-button" id="newGiftButton" type="button"><span>＋</span> Nueva petición</button>
           <div class="backup-tools">
-            <span class="backup-title">COPIA DE SEGURIDAD</span>
-            <button class="text-button" id="exportButton" type="button">↓ Descargar mis datos</button>
-            <button class="text-button" id="importButton" type="button">↑ Importar una copia</button>
+            <span class="backup-title">PUBLICAR Y RESPALDAR</span>
+            <p class="editor-subtitle">Descarga el JSON y súbelo a <code>data/regalos.json</code> en GitHub para actualizar la carta pública.</p>
+            <button class="text-button" id="exportButton" type="button">↓ Descargar regalos.json para publicar</button>
+            <button class="text-button" id="reloadPublicButton" type="button">↻ Recargar lista pública</button>
+            <button class="text-button" id="importButton" type="button">↑ Importar una copia JSON</button>
             <input id="importInput" type="file" accept="application/json,.json" hidden>
           </div>
         </aside>
@@ -175,7 +177,7 @@
           </form>
         </section>
       </div>
-      <div class="editor-footnote"><span>✦</span> Los cambios se guardan en este navegador. Descarga una copia para no perderlos.</div>
+      <div class="editor-footnote"><span>✦</span> Los cambios del editor son un borrador local. Para publicarlos, descarga regalos.json y reemplaza data/regalos.json en GitHub.</div>
     </div>
   </dialog>
 

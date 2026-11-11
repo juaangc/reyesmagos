@@ -11,8 +11,10 @@
   const editorGiftList = $('#editorGiftList');
   const linkRows = $('#linkRows');
   const formStatus = $('#formStatus');
-  let gifts = loadGifts();
+  let gifts = [];
   let editingId = null;
+  let publicDataLoaded = false;
+  let localDraftChanged = false;
 
   function makeId() {
     return window.crypto && typeof window.crypto.randomUUID === 'function'
@@ -67,9 +69,32 @@
     }
   }
 
+  async function loadPublicGifts() {
+    try {
+      // Ruta relativa: funciona tanto en un dominio propio como en /nombre-repo/ de GitHub Pages.
+      const response = await fetch('data/regalos.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const parsed = await response.json();
+      const items = Array.isArray(parsed) ? parsed : parsed.gifts;
+      if (!Array.isArray(items)) throw new Error('El JSON público no contiene una lista de regalos.');
+      gifts = items.map(normalizeGift).filter(Boolean);
+      publicDataLoaded = true;
+      localDraftChanged = false;
+      renderAll();
+      return true;
+    } catch (error) {
+      console.warn('No se pudo cargar data/regalos.json. Se utilizará la copia local si existe.', error);
+      gifts = loadGifts();
+      renderAll();
+      if (!publicDataLoaded) setStatus('No se ha podido cargar la lista pública. Comprueba data/regalos.json.', true);
+      return false;
+    }
+  }
+
   function persistGifts() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 1, gifts }));
+      localDraftChanged = true;
       return true;
     } catch (error) {
       console.error('No se pudieron guardar los cambios.', error);
@@ -293,17 +318,24 @@
   });
 
   $('#exportButton').addEventListener('click', () => {
-    const backup = { format: 'carta-reyes-magos', version: 1, exportedAt: new Date().toISOString(), gifts };
-    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+    // Este archivo es el que se debe subir al repositorio, sustituyendo data/regalos.json.
+    const blob = new Blob([JSON.stringify(gifts, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
     anchor.href = url;
-    anchor.download = 'mi-carta-reyes-2027.json';
+    anchor.download = 'regalos.json';
     document.body.append(anchor);
     anchor.click();
     anchor.remove();
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-    setStatus('Copia descargada. Guárdala en un lugar seguro.');
+    setStatus('regalos.json descargado. Súbelo a la carpeta data/ de GitHub y sustituye el anterior.');
+  });
+
+  $('#reloadPublicButton').addEventListener('click', async () => {
+    if (localDraftChanged && !window.confirm('Hay cambios locales que todavía no has publicado. Si recargas, se perderán. ¿Continuar?')) return;
+    setStatus('Cargando la lista pública…');
+    const loaded = await loadPublicGifts();
+    setStatus(loaded ? 'Lista pública recargada desde GitHub.' : 'No se pudo actualizar desde GitHub.', !loaded);
   });
 
   $('#importButton').addEventListener('click', () => $('#importInput').click());
@@ -452,4 +484,5 @@
   }
 
   renderAll();
+  loadPublicGifts();
 })();
